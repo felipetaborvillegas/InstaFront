@@ -19,6 +19,14 @@ nav {
     img {
         @include imagen(50px, 50px);
     }
+    input {
+        width: 400px;
+        height: 40px;
+        border-radius: 5px;
+        border: $borders;
+        padding-left: 20px;
+        display: none;
+    }
 }
 
 .upper-section {
@@ -31,6 +39,9 @@ nav {
     border-radius: 5px;
     img {
         @include imagen(60px,60px);
+    }
+    .hide{
+        display: none;
     }
 }
 
@@ -81,11 +92,94 @@ nav {
     }
 }
 
+.lateral{
+    display: none;
+}
+
 footer{
     background-color: black;
     text-align: center;
     padding: 8px;
     p{
         @include texto(#FFFFFF);
+    }
+}
+
+@media (min-width: 850px) {
+    nav{
+        input{
+            display: inline-block;
+        }
+    }    
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 60px;
+        .upper-section {
+            width: 500px;
+            .hide{
+                display: block;
+            }
+        }
+        .lateral{
+            width: 284px;
+            display: block;
+            margin: 0px auto;
+            padding-top: 25px;
+            .arriba{
+                display: flex;
+                align-items: center;
+                margin-bottom: 34px;
+                justify-content: space-between;
+                .arriba-uno{
+                    display: flex;
+                    align-items: center;
+                }
+                img{
+                    @include imagen(50px, 50px);
+                    margin-right: 13px;
+                }
+                h3{
+                    @include texto($negro);
+                    font-weight: 500;
+                    margin-bottom: 4px;
+                }
+                p{
+                    @include texto(#808080);
+                    letter-spacing: 5px;
+                }
+                .link {
+                    @include links
+                }
+            }
+            .sugerencias{
+                font-weight: 700;
+                font-size: 10px;
+                color: #808080;
+                margin-bottom: 10px;
+            }
+            .medio{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                .medio-uno{
+                    display: flex;
+                    align-items: center;
+                    img{
+                        @include imagen(50px, 50px);
+                        margin-right: 4px;
+                    }
+                    h3{
+                        @include texto($negro);
+                        font-weight: 500;
+                    }
+                }
+                h3{
+                    @include links;
+                }
+            }
+        }
     }
 }

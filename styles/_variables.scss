@@ -16,3 +16,9 @@ $borders: 0.4px solid rgba(34, 34, 34, 0.5);
         font-size: 10px;
         color: $color;
 }
+
+@mixin links {
+        font-weight: 500;
+        font-size: 12px;
+        color: #1CA0F6;
+}
