@@ -1,0 +1,91 @@
+@import "./variables.scss";
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px;
+    h1 {
+        font-weight: 400px;
+        font-size: 25px;
+        color: $negro;
+    }
+    img {
+        @include imagen(50px, 50px);
+    }
+}
+
+.upper-section {
+    display: flex;
+    justify-content: space-evenly;
+    width: 364px;
+    margin: 25px auto;
+    border: $borders;
+    padding: 20px 30px;
+    border-radius: 5px;
+    img {
+        @include imagen(60px,60px);
+    }
+}
+
+.lower-section {
+    width: 360px;
+    margin: 27px auto;
+    border: $borders;
+    border-radius: 5px;
+    margin-bottom: 95px;
+    .first{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: $borders;
+        padding: 9px;
+        .foto-nombre{
+            display: flex;
+            align-items: center;
+            img{
+                @include imagen(50px, 50px);
+            }
+            h2{
+                font-size: 15px;
+                margin-left: 9px;
+            }
+        }
+    }
+    .foto-grande {
+        height: 320px;
+        width: 320px;
+        margin: 20px 20px 10px;
+    }
+    .icons {
+        display: flex;
+        font-size: 24px;
+        i{
+            margin-left: 20px;
+        }
+    }
+    p{
+        margin: 11px 20px;
+    }
+    .uno, .tres, .cuatro {
+        @include texto($negro);
+    }
+    .dos {
+        @include texto(#A49B9B);
+    }
+}
+
+footer{
+    background-color: black;
+    text-align: center;
+    padding: 8px;
+    p{
+        @include texto(#FFFFFF);
+    }
+}
